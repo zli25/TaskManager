@@ -1,0 +1,147 @@
+.container {
+	width:960px;
+
+}
+
+header {
+
+	height:70px;
+	line-height: 70px;
+	background-color: #c8e1c2;
+	font-size:18px;
+}
+
+header a {
+
+	color:black;
+	margin-right:25px;
+
+}
+
+header  .logout  {
+	float:right;
+	margin-right:0;
+
+}
+
+header .header-welcome {
+	float:right;
+	margin-right:10px;
+	color:red;
+
+}
+
+
+
+header .login, .signup {
+
+	float:right;
+}
+
+.task a{
+	float:left;
+	margin-right:15px;
+}
+
+.task {
+	padding: 5px;
+}
+
+section.done {
+	background-color:#c8e1c2;
+}
+
+
+section.todo {
+	background-color:#e0e0e0;
+}
+
+h2.tasks {
+	text-align: center;
+}
+
+.create-task {
+	width:500px;
+	margin:0 auto;
+	background-color: #e0e0e0;
+	padding:30px;
+}
+
+
+.create-task label{
+	width:80px;
+	vertical-align: top;
+
+}
+
+.edit form {
+	width:500px;
+	margin:0 auto;
+	background-color: #e0e0e0;
+	padding:30px;
+}
+
+.edit label{
+	width:80px;
+	vertical-align: top;
+}
+
+form#login {
+
+	width:300px;
+	margin:0 auto;
+	background-color: #e0e0e0;
+	padding:30px;
+
+}
+
+
+form#signup {
+	float;none;
+	width:400px;
+	margin:0 auto;
+	background-color: #e0e0e0;
+	padding:30px;
+
+}
+
+
+
+.form-group {
+	position:relative;
+}
+
+
+h2.add-task{
+	text-align: center;
+
+}
+
+h2.update-header {
+	text-align: center;
+}
+
+h1.login-header{
+	text-align: center;
+
+}
+
+h1.signup-header{
+	text-align: center;
+
+}
+
+p.description {
+	font-style: italic;
+}
+
+
+.task-done form, span{
+
+	float:left;
+	margin-right:10px;
+}
+
+.fix {
+	clear:both;
+}
