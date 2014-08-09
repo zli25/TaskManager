@@ -4,7 +4,7 @@
 @section('content')
 
 
-<h2 class='tasks'>Tasks todo</h2>
+<h2 class='tasks'>Tasks done</h2>
 
 @foreach($tasks as $task)
 			
