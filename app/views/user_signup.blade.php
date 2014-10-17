@@ -8,9 +8,7 @@
 
 	<h1 class='signup-header'>Sign up</h1>
 	
-	@foreach($errors->all() as $message) 
-		<div class='error'>{{ $message }}</div>
-	@endforeach
+	
 	
 	{{ Form::open(array('url' => '/signup', 'id'=>'signup')) }}
 		
@@ -31,5 +29,11 @@
 		{{ Form::submit('Submit') }}
 	
 	{{ Form::close() }}
+
+	<div class='error-message'>
+		@foreach($errors->all() as $message) 
+			<div class='error'>{{ $message }}</div>
+		@endforeach
+	</div>
 
 @stop

@@ -109,7 +109,7 @@ class TaskController extends BaseController {
 		
 		$task->save();
 		
-		return Redirect::action('TaskController@getOne', $task->id)->with('flash_message','Your book has been added.');
+		return Redirect::action('TaskController@getOne', $task->id)->with('flash_message','Your task has been added.');
 
 	}
 

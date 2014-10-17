@@ -9,11 +9,11 @@ class UserController extends BaseController {
 
 	
 	
-	public function getSignup() {
+	/*public function getSignup() {
 		
 		return View::make('user_signup');
 		
-	}
+	}*/
 	
 	public function postSignup() {
 		
@@ -31,8 +31,8 @@ class UserController extends BaseController {
 		# Step 3
 		if($validator->fails()) {
 			
-			return Redirect::to('/signup')
-				->with('flash_message', 'Sign up failed; please fix the errors listed below.')
+			return Redirect::to('/')
+				->with('flash_message', 'Sign up failed; Please fix the errors listed below.')
 				->withInput()
 				->withErrors($validator);
 		}
@@ -47,7 +47,7 @@ class UserController extends BaseController {
 			$user->save();
 		}
 		catch (Exception $e) {
-			return Redirect::to('/signup')
+			return Redirect::to('/')
 				->with('flash_message', 'Sign up failed; please try again.')
 				->withInput();
 		}
@@ -59,14 +59,14 @@ class UserController extends BaseController {
 				
 	}
 	
-	public function getLogin() {
+	/*public function getLogin() {
 		
 
 		return View::make('user_login');
 		
-	}
+	}*/
 	
-	public function postLogin() {
+	/*public function getLogin() {
 		
 		$credentials = Input::only('email', 'password');
 
@@ -77,6 +77,25 @@ class UserController extends BaseController {
 		else {
 			return Redirect::to('/login')
 				->with('flash_message', 'Log in failed; please try again.')
+				->withInput();
+		}
+		
+		return Redirect::to('login');
+				
+	}*/
+
+
+	public function postLogin() {
+		
+		$credentials = Input::only('email', 'password');
+
+	
+		if (Auth::attempt($credentials, $remember = true)) {
+			return Redirect::intended('/task/all')->with('flash_message', Auth::user()->fname.', welcome Back!');
+		}
+		else {
+			return Redirect::to('/')
+				->with('flash_message', 'Log in failed; Please try again.')
 				->withInput();
 		}
 		
